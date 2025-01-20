@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demander un Congé</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <div class="header">
+        <img src="/images/conge_img.png" alt="Icône de demande de congé" width="50" height="50">
+        <h2 class="welcome-user">Demander un Congé</h2>
+    </div>
+    <div class="form-container">
+        <h1>Remplir Formulaire</h1>
+        <form id="congeForm">
+            <div class="form-group">
+                <label for="startDate">Date de Début :</label>
+                <input type="date" id="startDate" name="startDate" required>
+            </div>
+            <div class="form-group">
+                <label for="endDate">Date de Fin :</label>
+                <input type="date" id="endDate" name="endDate" required>
+            </div>
+            <div class="form-group">
+                <label for="type">Type de Congé :</label>
+                <select id="type" name="type" required>
+                    <option value="Congé Annuel">Congé Annuel</option>
+                    <option value="Congé Maladie">Congé Maladie</option>
+                    <option value="Congé Maternité/Paternité">Congé Maternité/Paternité</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="desc">Description :</label>
+                <textarea name="desc" id="desc"></textarea>
+            </div>
+            <button type="submit">Soumettre</button>
+        </form>
+        <br>
+        <!-- Bouton pour aller à la liste des congés -->
+        <button onclick="window.location.href='/user/liste-des-conges'" class="btn-list">Voir la Liste des Congés</button>
+    </div>
+
+    <script src="/js/congeForm.js"></script>
+</body>
+</html>

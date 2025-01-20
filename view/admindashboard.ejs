@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des demandes</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <style>
+        /* General Table Styling */
+        .demandes-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .demandes-table th,
+        .demandes-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .demandes-table th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        .demandes-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .demandes-table tr:hover {
+            background-color: #ddd;
+        }
+
+        .no-demande {
+            text-align: center;
+            font-style: italic;
+            color: #555;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .header img {
+            margin-right: 10px;
+        }
+
+        .welcome-user {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="/images/conge_img.png" alt="Icône de demande de congé" width="50" height="50">
+        <h2 class="welcome-user">Bienvenu,<%= user.fullname %> la liste de congé :</h2>
+    </div>
+    <table class="demandes-table">
+        <thead>
+            <tr>
+                <th scope="col">Date Début</th>
+                <th scope="col">Date Fin</th>
+                <th scope="col">Type</th>
+                <th scope="col">Description</th>
+                <th scope="col">Statut</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (demandes.length === 0) { %>
+                <tr class="no-demande">
+                    <td colspan="6">Aucune demande trouvée.</td>
+                </tr>
+            <% } else { %>
+                <% demandes.forEach(demande => { %>
+                    <tr>
+                        <td><%= new Date(demande.startDate).toLocaleDateString() %></td>
+                        <td><%= new Date(demande.endDate).toLocaleDateString() %></td>
+                        <td><%= demande.type %></td>
+                        <td><%= demande.desc %></td>
+                        <td><%= demande.status %></td>
+                    </tr>
+                <% }); %>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+
+</html>

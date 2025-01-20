@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login - Gestion de Congés</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <div class="flex-layout">
+        <div class="right-content">
+            <h1>Bienvenue Chez Apeiron</h1>
+            <p>Remplissez le formulaire pour connecter </p>
+            <form id="registrationForm">
+    
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+                
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" placeholder="Entrez un mot de passe" required>
+                
+
+                <!-- <label for="role">Sélectionnez le rôle :</label>
+                <select id="role" name="role" required>
+                    <option value="user">Utilisateur</option>
+                    <option value="admin">Administrateur</option>
+                </select> -->
+                    
+                </select>
+                <button type="submit">Connecter </button>
+            </form>
+            <p>n'aies pas un compte ? <a href="/auth/signup">inscrivez vous</a></p>
+        </div>
+        <div class="left-content">
+            <img src="/images/login.jpg" alt="Image de connexion">
+
+        </div>
+    </div>
+    <script src="/js/login.js"></script>
+</body>
+</html>

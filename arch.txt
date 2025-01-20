@@ -1,0 +1,26 @@
+gestion-conge/
+├── backend/
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── leaveController.js
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── Leave.js
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── leaveRoutes.js
+│   ├── app.js
+│   ├── server.js
+├── frontend/
+│   ├── css/
+│   │   ├── styles.css
+│   ├── js/
+│   │   ├── main.js
+│   │   ├── user.js
+│   │   ├── admin.js
+│   ├── index.html
+│   ├── signup.html
+│   ├── user.html
+│   └── admin.html
+├── package.json
+└── README.md

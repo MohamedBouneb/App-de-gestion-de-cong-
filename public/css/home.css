@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Josefin Sans", serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.left-content {
+    flex: 1;
+    background-image: url(../images/home.jpg);
+    background-size: cover;
+}
+
+.right-content {
+    flex: 1;
+    background-color: #FEF9E1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3em;
+    color: #fabd26;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.6em;
+    margin-bottom: 2.5em;
+    text-align: center;
+    color: #9b59b6;
+}
+
+.btn {
+    display: flex;
+    gap: 15%;
+    margin-left: 8%;
+}
+
+.button-link {
+    display: inline-block;
+    width: 35%;
+    text-align: center;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: "Josefin Sans", serif;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button-link:hover {
+    background-color: #9b59b6;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #fabd26;
+}
