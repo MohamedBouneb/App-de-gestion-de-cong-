@@ -1,104 +1,128 @@
-/* Style global */
+/* Styles généraux */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: 'Roboto', sans-serif; /* Police moderne */
+  margin: 0;
+  padding: 0;
+  background-color: #f7f8fc; /* Couleur de fond douce */
+  color: #333; /* Couleur de texte harmonieuse */
+  line-height: 1.6;
 }
 
-/* Style pour la barre d'en-tête */
+/* En-tête */
 .header {
-    width: 100%;
-    background-color: #EB5A3C;
-    padding: 2% 0;
-    display: flex;
-    align-items: center;  /* Aligner verticalement l'image et le texte */
-    justify-content: center;  /* Centrer le contenu horizontalement */
-  }
-  
-  .header img {
-    margin-right: 10px;  /* Espacement entre l'image et le texte */
-  }
-  
-
-/* Container principal */
-.form-container {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #4facfe, #00f2fe); /* Dégradé moderne */
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Titre */
-h1 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
+.header img {
+  border-radius: 50%; /* Icône arrondie */
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Conteneur du formulaire */
+.form-container {
+  background: white;
+  margin: 30px auto;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.form-container h1 {
+  text-align: center;
+  color: #4facfe; /* Accent sur le titre */
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 /* Formulaire */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Groupes de formulaire */
 .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
-/* Étiquettes */
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
 }
 
-/* Champs de saisie */
-input[type="date"],
-select,
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border: 1px solid #4facfe;
+  outline: none;
+  box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+}
+
 textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+  resize: none;
+  height: 100px;
 }
 
-/* Zone de texte */
-textarea {
-    resize: vertical;
-    height: 80px;
+/* Boutons */
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  margin-top: 10px;
 }
 
-/* Bouton de soumission */
-button[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+button:hover {
+  background: linear-gradient(90deg, #00c6fb, #005bea); /* Accentuation */
+  transform: scale(1.02); /* Zoom subtil */
 }
 
-button[type="submit"]:hover {
-    background-color: #0056b3;
+button:active {
+  transform: scale(0.98); /* Réduction subtile */
 }
 
-/* Responsivité */
-@media (max-width: 600px) {
-    .form-container {
-        padding: 15px;
-    }
+/* Bouton de la liste des congés */
+.btn-list {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  color: #fff;
+  margin-top: 20px;
+}
 
-    h1 {
-        font-size: 20px;
-    }
+/* Réponse adaptative */
+@media (max-width: 768px) {
+  .form-container {
+      margin: 20px;
+      padding: 15px;
+  }
+
+  .header h2 {
+      font-size: 1.2rem;
+  }
 }
