@@ -136,3 +136,14 @@ body {
         font-size: 1.2rem;
     }
 }
+.logout-btn {
+    text-decoration: none;
+    color: white;
+    background-color: #C84C05;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    float: right;
+    margin-top: -40px;
+    margin-right: 20px;
+}
