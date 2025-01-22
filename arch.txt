@@ -2,25 +2,34 @@ gestion-conge/
 ├── backend/
 │   ├── controllers/
 │   │   ├── authController.js
-│   │   ├── leaveController.js
+│   │   ├── userController.js
 │   ├── models/
+│   │   ├── Conge.js
 │   │   ├── User.js
-│   │   ├── Leave.js
 │   ├── routes/
 │   │   ├── authRoutes.js
-│   │   ├── leaveRoutes.js
+│   │   ├── adminRoutes.js
+│   │   ├── dashboardRoutes.js
+│   │   ├── homeRoutes.js
 │   ├── app.js
-│   ├── server.js
 ├── frontend/
 │   ├── css/
-│   │   ├── styles.css
+│   │   ├── admindashboard.css
+│   │   ├── dashboard.css
+│   │   ├── home.css
+│   │   ├── ListCongeAdminePage.css
+│   │   ├── login.css
+│   │   ├── signup.css
 │   ├── js/
-│   │   ├── main.js
-│   │   ├── user.js
-│   │   ├── admin.js
-│   ├── index.html
-│   ├── signup.html
-│   ├── user.html
-│   └── admin.html
+│   │   ├── congeForm.js
+│   │   ├── login.js
+│   │   ├── signup.js
+    ├──view/
+│       ├── admindashboard.ejs
+│       ├── conge.html
+│       ├── home.html
+│       ├── ListCongeAdminPage.ejs
+│       ├── login.html
+│       └── signup.html
 ├── package.json
 └── README.md

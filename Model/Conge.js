@@ -5,7 +5,7 @@ const congeSchema = new mongoose.Schema({
     endDate: { type: String, required: true },
     type: { type: String, required: true },
     status: { type: String, required: true, enum: ['En attente', 'Approuvé', 'Refusé'] },
-    desc: { type: String }, // Nouveau champ
+    desc: { type: String }, 
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
 });
 
